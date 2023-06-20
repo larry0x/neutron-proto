@@ -1,3 +1,5 @@
+mod type_urls;
+
 pub const NEUTRON_VERSION: &str = include_str!("prost/neutron/NEUTRON_COMMIT");
 
 pub mod neutron {
