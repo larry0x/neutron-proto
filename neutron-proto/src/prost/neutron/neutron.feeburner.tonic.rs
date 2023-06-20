@@ -4,8 +4,7 @@
 #[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
 pub mod query_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
-    use tonic::codegen::http::Uri;
-    use tonic::codegen::*;
+    use tonic::codegen::{http::Uri, *};
     #[derive(Debug, Clone)]
     pub struct QueryClient<T> {
         inner: tonic::client::Grpc<T>,
@@ -76,7 +75,7 @@ pub mod query_client {
             self
         }
         /** Parameters queries the parameters of the module.
-        */
+         */
         pub async fn params(
             &mut self,
             request: impl tonic::IntoRequest<super::QueryParamsRequest>,
@@ -92,7 +91,7 @@ pub mod query_client {
             self.inner.unary(request.into_request(), path, codec).await
         }
         /** TotalBurnedNeutronsAmount queries total amount of burned neutron fees.
-        */
+         */
         pub async fn total_burned_neutrons_amount(
             &mut self,
             request: impl tonic::IntoRequest<super::QueryTotalBurnedNeutronsAmountRequest>,
@@ -122,13 +121,13 @@ pub mod query_server {
     #[async_trait]
     pub trait Query: Send + Sync + 'static {
         /** Parameters queries the parameters of the module.
-        */
+         */
         async fn params(
             &self,
             request: tonic::Request<super::QueryParamsRequest>,
         ) -> Result<tonic::Response<super::QueryParamsResponse>, tonic::Status>;
         /** TotalBurnedNeutronsAmount queries total amount of burned neutron fees.
-        */
+         */
         async fn total_burned_neutrons_amount(
             &self,
             request: tonic::Request<super::QueryTotalBurnedNeutronsAmountRequest>,

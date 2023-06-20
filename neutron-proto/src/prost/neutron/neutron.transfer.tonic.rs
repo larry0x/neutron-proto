@@ -4,8 +4,7 @@
 #[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
 pub mod query_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
-    use tonic::codegen::http::Uri;
-    use tonic::codegen::*;
+    use tonic::codegen::{http::Uri, *};
     #[derive(Debug, Clone)]
     pub struct QueryClient<T> {
         inner: tonic::client::Grpc<T>,
@@ -76,7 +75,7 @@ pub mod query_client {
             self
         }
         /** DenomTrace queries a denomination trace information.
-        */
+         */
         pub async fn denom_trace(
             &mut self,
             request: impl tonic::IntoRequest<
@@ -99,7 +98,7 @@ pub mod query_client {
             self.inner.unary(request.into_request(), path, codec).await
         }
         /** DenomTraces queries all denomination traces.
-        */
+         */
         pub async fn denom_traces(
             &mut self,
             request: impl tonic::IntoRequest<
@@ -122,7 +121,7 @@ pub mod query_client {
             self.inner.unary(request.into_request(), path, codec).await
         }
         /** Params queries all parameters of the ibc-transfer module.
-        */
+         */
         pub async fn params(
             &mut self,
             request: impl tonic::IntoRequest<
@@ -145,7 +144,7 @@ pub mod query_client {
             self.inner.unary(request.into_request(), path, codec).await
         }
         /** DenomHash queries a denomination hash information.
-        */
+         */
         pub async fn denom_hash(
             &mut self,
             request: impl tonic::IntoRequest<
@@ -179,7 +178,7 @@ pub mod query_server {
     #[async_trait]
     pub trait Query: Send + Sync + 'static {
         /** DenomTrace queries a denomination trace information.
-        */
+         */
         async fn denom_trace(
             &self,
             request: tonic::Request<
@@ -192,7 +191,7 @@ pub mod query_server {
             tonic::Status,
         >;
         /** DenomTraces queries all denomination traces.
-        */
+         */
         async fn denom_traces(
             &self,
             request: tonic::Request<
@@ -205,7 +204,7 @@ pub mod query_server {
             tonic::Status,
         >;
         /** Params queries all parameters of the ibc-transfer module.
-        */
+         */
         async fn params(
             &self,
             request: tonic::Request<
@@ -218,7 +217,7 @@ pub mod query_server {
             tonic::Status,
         >;
         /** DenomHash queries a denomination hash information.
-        */
+         */
         async fn denom_hash(
             &self,
             request: tonic::Request<
@@ -483,8 +482,7 @@ pub mod query_server {
 #[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
-    use tonic::codegen::http::Uri;
-    use tonic::codegen::*;
+    use tonic::codegen::{http::Uri, *};
     #[derive(Debug, Clone)]
     pub struct MsgClient<T> {
         inner: tonic::client::Grpc<T>,

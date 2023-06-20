@@ -96,7 +96,7 @@ fn run_git(args: impl IntoIterator<Item = impl AsRef<OsStr>>) {
 }
 
 fn run_rustfmt(dir: &Path) {
-    let mut args = ["--edition", "2021"]
+    let mut args = ["+nightly", "--edition", "2021"]
         .iter()
         .map(Into::into)
         .collect::<Vec<OsString>>();
