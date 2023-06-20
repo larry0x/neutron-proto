@@ -3,12 +3,12 @@ resolver = "2"
 members  = ["neutron-proto", "proto-build"]
 
 [workspace.package]
-version       = "0.0.0"
-authors       = ["larry <gm@larry.engineer>"]
+version       = "0.1.0"
+authors       = ["Larry Lyu <gm@larry.engineer>"]
 edition       = "2021"
 rust-version  = "1.69.0"
 license       = "Apache-2.0"
-homepage      = "https://larry.engineer"
+homepage      = "https://neutron.org/"
 repository    = "https://github.com/larry0x/neutron-proto"
 documentation = "https://github.com/larry0x/neutron-proto#readme"
 keywords      = ["neutron", "protobuf"]

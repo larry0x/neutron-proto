@@ -352,7 +352,7 @@ dependencies = [
 
 [[package]]
 name = "neutron-proto"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "cosmos-sdk-proto",
  "prost",
@@ -481,7 +481,7 @@ dependencies = [
 
 [[package]]
 name = "proto-build"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "log",
  "regex",

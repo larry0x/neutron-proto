@@ -1,5 +1,6 @@
 [package]
 name          = "neutron-proto"
+description   = "Protobuf type definitions in Rust for the Neutron blockchain"
 version       = { workspace = true }
 authors       = { workspace = true }
 edition       = { workspace = true }
