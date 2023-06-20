@@ -8,7 +8,7 @@ test:
   cargo test -p neutron-proto
 
 lint:
-  cargo +nightly clippy
+  cargo +nightly clippy -p proto-build
 
 fmt:
   cargo +nightly fmt

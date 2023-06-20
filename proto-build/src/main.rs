@@ -125,7 +125,7 @@ fn make_temp_dir(dir: &Path) {
         fs::remove_dir_all(dir.clone()).unwrap();
     }
 
-    fs::create_dir_all(&dir).unwrap();
+    fs::create_dir_all(dir).unwrap();
 }
 
 fn output_version(out_dir: &Path) {
@@ -136,7 +136,7 @@ fn output_version(out_dir: &Path) {
 fn compile_protos_and_services(out_dir: &Path) {
     info!("Compiling neutron .proto files to Rust into '{}'...", out_dir.display());
     let proto_path = Path::new(NEUTRON_DIR).join("proto");
-    run_buf("proto-build/buf.gen.yaml", &proto_path, out_dir);
+    run_buf("proto-build/buf.gen.yaml", proto_path, out_dir);
     info!("=> Done!");
 }
 
