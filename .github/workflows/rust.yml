@@ -20,7 +20,7 @@ jobs:
         # here we check the neutron-proto crate is wasm-compatible when the grpc-
         # related features are turned off
         # we also do not check tests since they use the grpc features
-        run: cargo check --locked --target wasm32-unknown-unknown -p neutron-proto --no-default-features
+        run: cargo check --locked --target wasm32-unknown-unknown -p neutron-proto --no-default-features --features cosmwasm
         env:
           RUST_BACKTRACE: 1
 
@@ -37,7 +37,7 @@ jobs:
           toolchain: stable
 
       - name: Run tests
-        run: cargo test --lib --locked --tests
+        run: cargo test -p neutron-proto --all-features
         env:
           RUST_BACKTRACE: 1
 
