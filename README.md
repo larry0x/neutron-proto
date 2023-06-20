@@ -1,6 +1,6 @@
 # neutron-proto
 
-Protobuf type definitions in Rust for Neutron blockchain
+Protobuf type definitions in Rust for the Neutron blockchain.
 
 Based on the [proto-build](https://github.com/cosmos/cosmos-rust/blob/main/proto-build/src/main.rs) script originally created by Justin Kilpatrick and Tony Arcieri.
 
