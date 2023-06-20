@@ -28,4 +28,5 @@ tendermint-proto = { workspace = true }
 tonic            = { workspace = true, optional = true, features = ["codegen", "prost"] }
 
 [dev-dependencies]
-tokio = { workspace = true }
+cosmwasm-std = { workspace = true, features = ["stargate"] }
+tokio        = { workspace = true }
