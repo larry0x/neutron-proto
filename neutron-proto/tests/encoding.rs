@@ -20,9 +20,10 @@ fn proto_encoding() {
         fee: None,
     };
 
+    // encode the message to binary
     let msg_bytes = msg.encode_to_vec();
 
-    // try decode, should restore the same message
+    // try decoding, should restore the same message
     let msg_decoded = MsgTransfer::decode(msg_bytes.as_slice()).unwrap();
     assert_eq!(msg, msg_decoded);
 }
