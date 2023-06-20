@@ -16,10 +16,6 @@ keywords      = { workspace = true }
 publish       = false
 
 [dependencies]
-log         = { workspace = true }
-prost       = { workspace = true }
-prost-build = { workspace = true }
-regex       = { workspace = true }
-tonic       = { workspace = true }
-tonic-build = { workspace = true }
-walkdir     = { workspace = true }
+log     = { workspace = true }
+regex   = { workspace = true }
+walkdir = { workspace = true }
