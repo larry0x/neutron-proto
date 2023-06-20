@@ -3,7 +3,7 @@ resolver = "2"
 members  = ["neutron-proto", "proto-build"]
 
 [workspace.package]
-version       = "0.1.0"
+version       = "0.1.1"
 authors       = ["Larry Lyu <gm@larry.engineer>"]
 edition       = "2021"
 rust-version  = "1.69.0"
