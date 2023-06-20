@@ -44,7 +44,7 @@ pub struct RegisteredQuery {
     /// The remote chain last block height when the query result was updated.
     #[prost(message, optional, tag = "9")]
     pub last_submitted_result_remote_height:
-        ::core::option::Option<super::super::ibc::core::client::v1::Height>,
+        ::core::option::Option<::cosmos_sdk_proto::ibc::core::client::v1::Height>,
     /// Amount of coins deposited for the query.
     #[prost(message, repeated, tag = "10")]
     pub deposit: ::prost::alloc::vec::Vec<::cosmos_sdk_proto::cosmos::base::v1beta1::Coin>,

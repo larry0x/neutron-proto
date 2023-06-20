@@ -80,11 +80,11 @@ pub mod query_client {
         pub async fn denom_trace(
             &mut self,
             request: impl tonic::IntoRequest<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTraceRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTraceResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceResponse,
             >,
             tonic::Status,
         > {
@@ -103,11 +103,11 @@ pub mod query_client {
         pub async fn denom_traces(
             &mut self,
             request: impl tonic::IntoRequest<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTracesRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTracesResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesResponse,
             >,
             tonic::Status,
         > {
@@ -126,11 +126,11 @@ pub mod query_client {
         pub async fn params(
             &mut self,
             request: impl tonic::IntoRequest<
-                super::super::super::ibc::applications::transfer::v1::QueryParamsRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryParamsResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsResponse,
             >,
             tonic::Status,
         > {
@@ -149,11 +149,11 @@ pub mod query_client {
         pub async fn denom_hash(
             &mut self,
             request: impl tonic::IntoRequest<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomHashRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomHashResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashResponse,
             >,
             tonic::Status,
         > {
@@ -183,11 +183,11 @@ pub mod query_server {
         async fn denom_trace(
             &self,
             request: tonic::Request<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTraceRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTraceResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceResponse,
             >,
             tonic::Status,
         >;
@@ -196,11 +196,11 @@ pub mod query_server {
         async fn denom_traces(
             &self,
             request: tonic::Request<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTracesRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomTracesResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesResponse,
             >,
             tonic::Status,
         >;
@@ -209,11 +209,11 @@ pub mod query_server {
         async fn params(
             &self,
             request: tonic::Request<
-                super::super::super::ibc::applications::transfer::v1::QueryParamsRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryParamsResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsResponse,
             >,
             tonic::Status,
         >;
@@ -222,11 +222,11 @@ pub mod query_server {
         async fn denom_hash(
             &self,
             request: tonic::Request<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomHashRequest,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashRequest,
             >,
         ) -> Result<
             tonic::Response<
-                super::super::super::ibc::applications::transfer::v1::QueryDenomHashResponse,
+                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashResponse,
             >,
             tonic::Status,
         >;
@@ -290,9 +290,9 @@ pub mod query_server {
                     impl<
                         T: Query,
                     > tonic::server::UnaryService<
-                        super::super::super::ibc::applications::transfer::v1::QueryDenomTraceRequest,
+                        ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceRequest,
                     > for DenomTraceSvc<T> {
-                        type Response = super::super::super::ibc::applications::transfer::v1::QueryDenomTraceResponse;
+                        type Response = ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceResponse;
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
                             tonic::Status,
@@ -300,7 +300,7 @@ pub mod query_server {
                         fn call(
                             &mut self,
                             request: tonic::Request<
-                                super::super::super::ibc::applications::transfer::v1::QueryDenomTraceRequest,
+                                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTraceRequest,
                             >,
                         ) -> Self::Future {
                             let inner = self.0.clone();
@@ -330,9 +330,9 @@ pub mod query_server {
                     impl<
                         T: Query,
                     > tonic::server::UnaryService<
-                        super::super::super::ibc::applications::transfer::v1::QueryDenomTracesRequest,
+                        ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesRequest,
                     > for DenomTracesSvc<T> {
-                        type Response = super::super::super::ibc::applications::transfer::v1::QueryDenomTracesResponse;
+                        type Response = ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesResponse;
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
                             tonic::Status,
@@ -340,7 +340,7 @@ pub mod query_server {
                         fn call(
                             &mut self,
                             request: tonic::Request<
-                                super::super::super::ibc::applications::transfer::v1::QueryDenomTracesRequest,
+                                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomTracesRequest,
                             >,
                         ) -> Self::Future {
                             let inner = self.0.clone();
@@ -369,20 +369,17 @@ pub mod query_server {
                 "/neutron.transfer.Query/Params" => {
                     #[allow(non_camel_case_types)]
                     struct ParamsSvc<T: Query>(pub Arc<T>);
-                    impl<
-                        T: Query,
-                    > tonic::server::UnaryService<
-                        super::super::super::ibc::applications::transfer::v1::QueryParamsRequest,
-                    > for ParamsSvc<T> {
-                        type Response = super::super::super::ibc::applications::transfer::v1::QueryParamsResponse;
-                        type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
-                            tonic::Status,
-                        >;
+                    impl<T: Query>
+                        tonic::server::UnaryService<
+                            ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsRequest,
+                        > for ParamsSvc<T>
+                    {
+                        type Response = ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
                         fn call(
                             &mut self,
                             request: tonic::Request<
-                                super::super::super::ibc::applications::transfer::v1::QueryParamsRequest,
+                                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryParamsRequest,
                             >,
                         ) -> Self::Future {
                             let inner = self.0.clone();
@@ -412,9 +409,9 @@ pub mod query_server {
                     impl<
                         T: Query,
                     > tonic::server::UnaryService<
-                        super::super::super::ibc::applications::transfer::v1::QueryDenomHashRequest,
+                        ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashRequest,
                     > for DenomHashSvc<T> {
-                        type Response = super::super::super::ibc::applications::transfer::v1::QueryDenomHashResponse;
+                        type Response = ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashResponse;
                         type Future = BoxFuture<
                             tonic::Response<Self::Response>,
                             tonic::Status,
@@ -422,7 +419,7 @@ pub mod query_server {
                         fn call(
                             &mut self,
                             request: tonic::Request<
-                                super::super::super::ibc::applications::transfer::v1::QueryDenomHashRequest,
+                                ::cosmos_sdk_proto::ibc::applications::transfer::v1::QueryDenomHashRequest,
                             >,
                         ) -> Self::Future {
                             let inner = self.0.clone();
