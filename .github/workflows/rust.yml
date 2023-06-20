@@ -20,7 +20,9 @@ jobs:
           targets: wasm32-unknown-unknown
 
       - name: Check for errors
-        run: cargo check --locked --tests --no-default-features --target wasm32-unknown-unknown
+        # here we check the neutron-proto crate is wasm-compatible when the grpc-
+        # related features are turned off
+        run: cargo check --locked --tests --target wasm32-unknown-unknown -p neutron-proto --no-default-features
         env:
           RUST_BACKTRACE: 1
 
@@ -61,4 +63,6 @@ jobs:
           components: clippy
 
       - name: Run clippy
-        run: cargo clippy --tests -- -D warnings
+        # here we only check for linter warnings in the proto-build crate.
+        # the generated prost code may contain some warnings but that's not our fault
+        run: cargo clippy -p proto-build -- -D warnings

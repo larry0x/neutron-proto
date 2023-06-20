@@ -7,5 +7,8 @@ check:
 test:
   cargo test -p neutron-proto
 
+lint:
+  cargo +nightly clippy
+
 fmt:
-  cargo +nightly -p neutron-proto
+  cargo +nightly fmt
