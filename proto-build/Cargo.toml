@@ -1,14 +1,24 @@
 [package]
-name = "proto-build"
-version = "0.1.0"
-authors = ["Justin Kilpatrick <justin@althea.net>", "Tony Arcieri <tony@iqlusion.io>"]
-edition = "2018"
-publish = false
+name          = "proto-build"
+authors       = [
+  "Justin Kilpatrick <justin@althea.net>",
+  "Tony Arcieri <tony@iqlusion.io>",
+  "Larry Lyu <gm@larry.engineer>",
+]
+version       = { workspace = true }
+edition       = { workspace = true }
+rust-version  = { workspace = true }
+license       = { workspace = true }
+homepage      = { workspace = true }
+repository    = { workspace = true }
+documentation = { workspace = true }
+keywords      = { workspace = true }
+publish       = false
 
 [dependencies]
-prost = "0.11"
-prost-build = "0.11"
-tonic = "0.9"
-tonic-build = "0.9"
-regex = "1"
-walkdir = "2"
+prost       = { workspace = true }
+prost-build = { workspace = true }
+regex       = { workspace = true }
+tonic       = { workspace = true }
+tonic-build = { workspace = true }
+walkdir     = { workspace = true }

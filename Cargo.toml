@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members  = ["proto-build"]
+
+[workspace.package]
+version       = "0.0.0"
+authors       = ["larry <gm@larry.engineer>"]
+edition       = "2021"
+rust-version  = "1.69.0"
+license       = "Apache-2.0"
+homepage      = "https://larry.engineer"
+repository    = "https://github.com/larry0x/neutron-proto"
+documentation = "https://github.com/larry0x/neutron-proto#readme"
+keywords      = ["neutron", "protobuf"]
+
+[workspace.dependencies]
+cosmos-sdk-proto = { version = "0.19", default-features = false }
+prost            = "0.11"
+prost-build      = "0.11"
+prost-types      = "0.11"
+regex            = "1"
+tendermint-proto = "0.32"
+tokio            = "1"
+tonic            = { version = "0.9", default-features = false }
+tonic-build      = "0.9"
+walkdir          = "2"
