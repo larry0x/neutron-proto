@@ -13,6 +13,10 @@ pub mod neutron {
         include!("prost/neutron/neutron.feeburner.rs");
     }
 
+    pub mod feerefunder {
+        include!("prost/neutron/neutron.feerefunder.rs");
+    }
+
     pub mod interchainqueries {
         include!("prost/neutron/neutron.interchainqueries.rs");
     }
