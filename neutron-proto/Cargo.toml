@@ -16,17 +16,18 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
+cosmwasm       = ["cosmwasm-std/stargate"]
 default        = ["grpc-transport"]
 grpc           = ["tonic", "cosmos-sdk-proto/grpc"]
 grpc-transport = ["grpc", "tonic/transport", "cosmos-sdk-proto/grpc-transport"]
 
 [dependencies]
 cosmos-sdk-proto = { workspace = true }
+cosmwasm-std     = { workspace = true, optional = true }
 prost            = { workspace = true }
 prost-types      = { workspace = true }
 tendermint-proto = { workspace = true }
 tonic            = { workspace = true, optional = true, features = ["codegen", "prost"] }
 
 [dev-dependencies]
-cosmwasm-std = { workspace = true, features = ["stargate"] }
-tokio        = { workspace = true }
+tokio = { workspace = true }

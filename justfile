@@ -5,7 +5,7 @@ check:
   cargo check -p neutron-proto --no-default-features --target wasm32-unknown-unknown
 
 test:
-  cargo test -p neutron-proto
+  cargo test -p neutron-proto --all-features
 
 lint:
   cargo +nightly clippy -p proto-build
